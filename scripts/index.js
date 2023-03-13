@@ -10,8 +10,8 @@ if (age < 10 && height < 50 && weight < 40) {
     console.log("Is someone too fat or too big?");
 }
 
-// Task #2
 
+// Task #2
 let numOrStr = prompt('input number or string');
 console.log(numOrStr);
 
