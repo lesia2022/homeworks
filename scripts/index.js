@@ -5,9 +5,9 @@ const height = +prompt('Enter your dog height from the neck up, please (in centi
 const weight = +prompt('Enter your dog weight (in kilograms):');
 
 if (age < 10 && height < 50 && weight < 40) {
-    console.log("You are a good fit for a dog photo show! He is such a cutie!");
+    console.log('You are a good fit for a dog photo show! He is such a cutie!');
 } else {
-    console.log("Is someone too fat or too big?");
+    console.log('Is someone too fat or too big?');
 }
 
 
