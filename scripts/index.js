@@ -1,16 +1,15 @@
 'use strict';
 
 const number = prompt('Enter the number :');
-const exponentiation= prompt('Enter the exponentiation:');
+const exponentiation= +prompt('Enter the exponentiation:');
 
 function pow(number, exponentiation = 1) {
-    if (typeof number !== 'number' || typeof exponentiation !== 'number') {
+    if (typeof number !== 'number' || Number.isNaN(exponentiation)) {
         return 'some error'
     }
-    let result = Math.pow(number, exponentiation);
-    return result;
+    return Math.pow(number, exponentiation);
 }
-let result = pow(number, exponentiation);
+const result = pow(number, exponentiation);
 alert(result);
 
 
