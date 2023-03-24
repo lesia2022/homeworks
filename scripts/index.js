@@ -29,6 +29,4 @@ console.log(padString('hello', 6, '*', false));
 console.log(padString('hello', 2, '#', false));
 console.log(padString(123, 8, '*'));
 console.log(padString('hello', 'world', '*'));
-console.log(padString('hello', 8, '**'));
-console.log(padString('hello', 8, '*&', true));
 
