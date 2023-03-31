@@ -1,8 +1,19 @@
 'use strict';
-function calculatePotatoesForBorsch(borschVolume) {
-    return Math.ceil(borschVolume * 4 * 75 / 1000) * 13;
+
+const calculatePotatoMass = (volume, countPerLiter, weightPerPotato) => {
+    const potatoMassPerLiter = countPerLiter * weightPerPotato / 1000;
+    const totalPotatoMass = potatoMassPerLiter * volume;
+    return Math.ceil(totalPotatoMass);
 }
-const borschVolume = 48;
-console.log(`Total price of potatoes for ${borschVolume} liters of borsch is ${calculatePotatoesForBorsch(borschVolume)} UAH.`);
+function calculatePrice(mass, pricePerKg) {
+    return pricePerKg * mass;
+}
 
+const volume = 48;
+const countPerLiter = 4;
+const weightPerPotato = 75;
+const pricePerKg = 13;
 
+const potatoMass = calculatePotatoMass(volume, countPerLiter, weightPerPotato);
+const price = calculatePrice(potatoMass, pricePerKg);
+console.log(`Для приготовления ${volume} л борща необходимо купить ${potatoMass} кг картошки, суммарная цена ${price}`);
