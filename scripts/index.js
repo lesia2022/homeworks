@@ -1,5 +1,3 @@
-'use strict';
-
 let users = [
     {
         "index": 0,
@@ -55,19 +53,18 @@ let users = [
         "phone": "+1 (837) 586-3283",
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
-]
+];
 
-let filteredUsers = users.filter(user=> Number(user.balance.split('$')[1].split(',').join('')) > 2000);
-let phoneNumbers = filteredUsers.map(user=> user.phone);
+const filteredUsers = users.filter(user=> Number(user.balance.split('$')[1].split(',').join('')) > 2000);
+const phoneNumbers = filteredUsers.map(user=> user.phone);
 console.log(phoneNumbers);
 
-
 let totalBalance = 0;
-for (let i = 0; i < users.length; i++) {
-    let balanceString = users[i].balance;
+users.forEach(user => {
+    let balanceString = user.balance;
     if (balanceString.includes('$')) {
         let balance = Number(balanceString.replace("$", "").replace(",", ""));
         totalBalance += balance;
     }
-}
+});
 console.log(totalBalance);
