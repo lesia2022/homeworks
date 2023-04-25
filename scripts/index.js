@@ -23,3 +23,4 @@ const customFlat = (arr) => {
 }
 
 console.log(customFlat(arr));
+
