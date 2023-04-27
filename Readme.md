@@ -1,1 +1,4 @@
-Assignment #
+Assignment #37
+Написать свою реализацию функции bind
+
+
