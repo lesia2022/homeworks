@@ -15,6 +15,7 @@ function bind(fn, context, ...rest) {
 bind(info, user)('dog', 'beagle');
 bind(info, user, 'dog')('beagle');
 bind(info, user, 'dog','beagle')();
+console.log(user);
 
 
 
