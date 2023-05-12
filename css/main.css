@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+table {
+    border-collapse: collapse;
+    background-image: linear-gradient(to bottom, #efeff5, #b7d8ee, #196a7a);
+}
+
+td {
+    border: 1px solid black;
+    padding: 20px;
+}
+td:hover {
+    background-color: #00e2ff;
+}
