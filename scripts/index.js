@@ -1,6 +1,6 @@
 'use strict';
 
-let ladder = {
+const ladder = {
     step: 0,
     up: function() {
         this.step++;
@@ -11,9 +11,10 @@ let ladder = {
         return this;
     },
     showStep: function() {
-        alert(this.step);
-        return this;
+        return this.step;
     }
 };
 
-ladder.up().up().down().showStep();
+const stepValue = ladder.up().up().down().showStep();
+console.log(stepValue);
+
