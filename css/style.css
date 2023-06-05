@@ -14,3 +14,7 @@
 .taskDescription {
     font-size: 16px;
 }
+
+.buttonWrapper {
+    text-align: right;
+}
