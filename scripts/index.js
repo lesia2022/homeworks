@@ -1,14 +1,20 @@
 'use strict';
-'use strict';
-
 function DeepFreeze(obj) {
     Object.freeze(obj);
 
+
     Object.getOwnPropertyNames(obj).forEach((prop) => {
         let propValue = obj[prop];
-        if (typeof propValue === "object" && propValue !== null && !Object.isFrozen(propValue)) {
-            obj[prop] = DeepFreeze(propValue);
+        if (typeof propValue === 'object' && propValue !== null && !Object.isFrozen(propValue)) {
+            DeepFreeze(propValue);
         }
+
+        Object.defineProperty(obj, prop, {
+            value: propValue,
+            writable: false,
+            configurable: false,
+            enumerable: true
+        });
     });
 
     return obj;
